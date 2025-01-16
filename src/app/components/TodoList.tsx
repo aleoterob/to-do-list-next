@@ -16,10 +16,18 @@ import {
 } from "../lib/taskSlice";
 import React, { useState, useEffect } from "react";
 
+// Define an interface for the task object
+interface Task {
+  taskTitle: string;
+  taskDescription: string;
+  selectedDate: string | null;
+  taskId: string;
+}
+
 const TodoList: React.FC = () => {
   const [isPopupVisible, setPopupVisible] = useState(false);
   const [isEditPopupVisible, setEditPopupVisible] = useState(false);
-  const [taskToEdit, setTaskToEdit] = useState(null);
+  const [taskToEdit, setTaskToEdit] = useState<Task | null>(null);
 
   const tasks = useSelector((state: RootState) => state.tasks.tasks);
   const dispatch = useDispatch();
@@ -49,7 +57,7 @@ const TodoList: React.FC = () => {
     setPopupVisible(false);
   };
 
-  const handleEdit = (task) => {
+  const handleEdit = (task: Task) => {
     setTaskToEdit(task);
     setEditPopupVisible(true);
   };

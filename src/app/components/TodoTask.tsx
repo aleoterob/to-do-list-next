@@ -2,6 +2,14 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
 
+// Define an interface for the task object
+interface Task {
+  taskTitle: string;
+  taskDescription: string;
+  selectedDate: string | null;
+  taskId: string;
+}
+
 interface TodoTaskProps {
   taskTitle: string;
   taskDescription: string;
@@ -9,7 +17,7 @@ interface TodoTaskProps {
   taskId: string;
   className?: string;
   onMarkAsCompleted: (taskId: string) => void;
-  onEdit: (task: any) => void;
+  onEdit: (task: Task) => void;
 }
 
 const TodoTask: React.FC<TodoTaskProps> = ({

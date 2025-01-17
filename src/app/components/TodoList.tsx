@@ -90,7 +90,7 @@ const TodoList: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col max-w-[600px] w-full mx-auto justify-center items-center bg-transparent overflow-x-hidden   border rounded-xl border-gray-500/45 overflow-y-auto h-full">
+    <div className="flex flex-col max-w-[600px] w-full mx-auto justify-center items-center bg-transparent overflow-x-hidden mb-6  border rounded-xl border-gray-500/45 overflow-y-auto h-full">
       <div className="flex flex-row w-full justify-between items-center bg-azulJuztina py-4 px-6 overflow-y-auto ">
         <HiBookmarkAlt className="w-8 h-8 text-verdeAle" />
         <p className="font-montserrat pl-8 text-2xl font-light">Today</p>

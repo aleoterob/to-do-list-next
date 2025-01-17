@@ -61,21 +61,22 @@ const TodoTask: React.FC<TodoTaskProps> = ({
   return (
     <div
       id={`task-${taskId}`}
-      className={`flex flex-col w-px600 bg-rojoTodoTask/85 py-4 px-6 border-b border-gray-500/35 ${className}`}
+      className={`flex flex-col max-w-[600px] w-full bg-rojoTodoTask/85 py-4 px-6 border-b border-gray-500/35 mx-auto ${className}`}
     >
       <div className="flex flex-col mb-4">
         <div className="w-full">
-          <p className="font-montserrat text-xl font-normal task-title break-words">
-            <p className="font-montserrat font-semibold">Task:</p> {taskTitle}
-          </p>
-          <p className="font-montserrat text-base font-light task-desc break-words pt-3">
-            <p className="font-montserrat font-semibold">Description:</p>
+          <div className="font-montserrat text-xl font-normal task-title break-words">
+            <span className="font-montserrat font-semibold">Task:</span>{" "}
+            {taskTitle}
+          </div>
+          <div className="font-montserrat text-base font-light task-desc break-words pt-3">
+            <span className="font-montserrat font-semibold">Description:</span>{" "}
             {taskDescription}
-          </p>
-          <p className="font-montserrat text-base font-light pt-3">
-            <p className="font-montserrat font-semibold">Due date:</p>{" "}
+          </div>
+          <div className="font-montserrat text-base font-light pt-3">
+            <span className="font-montserrat font-semibold">Due date:</span>{" "}
             {selectedDate}
-          </p>
+          </div>
         </div>
       </div>
       <div className="flex flex-row justify-end gap-2">

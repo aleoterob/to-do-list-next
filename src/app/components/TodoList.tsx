@@ -112,7 +112,7 @@ const TodoList: React.FC = () => {
       <div className="flex flex-row w-full justify-start bg-rojoTodoTask py-4 px-6 border-b border-gray-300/35">
         <p className="font-montserrat pl-2 text-2xl font-normal">To do tasks</p>
       </div>
-      <div className="flex flex-col w-full overflow-y-auto overflow-x-hidden scrollable-container">
+      <div className="flex flex-col w-full  overflow-x-hidden max-h-[520px] md:max-h-[600px] lg:max-h-[600px] xl:max-h-[500px] overflow-y-visible scrollable-container">
         <NewTask
           isVisible={isPopupVisible}
           onClose={handleClosePopup}
